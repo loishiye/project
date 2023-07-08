@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CREATE ACCOUNT</title>
+	<style>
+		body {
+            margin: 0;
+	        padding: 0;
+	        background: #00bfff;
+		}
+		
+		form {
+	 		width: 420px;
+	        background: #191919;
+	        color: #fff;
+	        top: 50%;
+	        left: 50%;
+	        position: absolute;
+	        transform: translate(-50%,-50%);
+	        box-sizing: border-box;
+	        padding: 50px 20px;
+	        border-radius: 10px;
+	       box-shadow: 0 15px 30px rgba(0,0,0,.5);
+		}
+		h2{
+	           margin: 0;
+	            padding: 0 0 20px;
+	           text-align: center;
+	           font-size: 22px;
+        }
+           
+		input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+	        margin-bottom: 20px;
+			border: none;
+	        border-bottom: 1px solid #fff;
+	        background: transparent;
+	        outline: none;
+	        color: #fff;
+	        font-size: 16px;
+		}
+		
+		input[type=submit] {
+            width: 100%;
+	        margin-bottom: 20px;
+            border: none;
+	        outline: none;
+	        background: #00bfff;
+	        color: #fff;
+	        font-size: 18px;
+	        border-radius: 20px;
+			padding: 10px;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #c4d841;
+		}
+		
+		.error {
+			color: rgb(166, 201, 29);
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+		
+		.success {
+			color: green;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+        
+        <form  method="post" action="register.php">
+			<h2>CREATE ACCOUNT</h2>
+            <P>Name</P>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+			<p>Email</p>
+			<input type="text" name="email" placeholder="Enter Email">
+			<p>Password</p>
+			<input type="password" name="password" placeholder="Enter Password">
+            <p>Confirm Password</p>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat your password"><br>
+			<input type="submit" name="" value="Register">
+			<p>Already have an account? <a href="login.html">Sign in</a></p>
+		</form>
+</body>
+</html>
+

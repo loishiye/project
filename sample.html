@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>
+        <div id="form">
+            <form id="data-form">
+                <h5>Plate Number</h5>
+                <input type="text" name="plate_number">
+                <h5>Location</h5>
+                <input type="text" name="location"><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <script>
+            var form = document.getElementById('data-form');
+            form.addEventListener('submit', sendData);
+
+            function sendData(e) {
+                e.preventDefault();
+
+                var formData = new FormData(form);
+                var params = new URLSearchParams(formData).toString();
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'getdata.php?' + params, true);
+
+                xhr.onload = function() {
+                    if (this.status == 200) {
+                        console.log(this.responseText);
+                    }
+                }
+
+                xhr.send();
+            }
+        </script>
+    </body>
+</html>
